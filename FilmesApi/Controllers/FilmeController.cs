@@ -36,17 +36,18 @@ namespace FilmesApi.Controllers
             return CreatedAtAction(nameof(BuscarFilmePorId), new { filme.Id }, filmeDto);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult EditarFilme(int id, [FromBody] UpdateFilmeDto filmeDto)
+        [HttpPut]
+        public IActionResult EditarFilme([FromBody] UpdateFilmeDto filmeDto)
         {
-            _filmeService.EditarFilme(id, filmeDto);
+            _filmeService.EditarFilme(_mapper.Map<Filme>(filmeDto));
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public void ApagarFilme(int id)
+        public IActionResult ApagarFilme(int id)
         {
             _filmeService.ApagarFilme(id);
+            return NoContent();
         }
 
         [HttpGet("{id}")]

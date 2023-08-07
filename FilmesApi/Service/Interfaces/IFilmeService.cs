@@ -10,7 +10,7 @@ namespace FilmesApi.Service.Interfaces
 
         Filme AdicionarFilme(Filme filme);
 
-        Filme EditarFilme(int id, UpdateFilmeDto filme);
+        Filme EditarFilme(Filme filme);
 
         void ApagarFilme(int id);
 

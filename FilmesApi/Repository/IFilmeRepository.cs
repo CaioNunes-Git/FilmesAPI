@@ -10,9 +10,9 @@ namespace FilmesApi.Repository
 
          Filme AdicionarFilme(Filme filme);
 
-         Filme EditarFilme(int id, UpdateFilmeDto filme);
+         Filme EditarFilme(Filme filme);
 
-         void ApagarFilme(int id);
+         void ApagarFilme(Filme filme);
 
          Filme BuscarFilmePorId(int id);
 

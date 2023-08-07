@@ -3,18 +3,18 @@ using FilmesApi.Data;
 using FilmesApi.Data.Dtos;
 using FilmesApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FilmesApi.Repository
 {
     public class FilmeRepository : IFilmeRepository
     {
         private readonly FilmeContext _context;
-        private IMapper _mapper;
 
-        public FilmeRepository(FilmeContext context, IMapper mapper)
+
+        public FilmeRepository(FilmeContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
         public IEnumerable<Filme> ListarTodos(int skip, int take)
         {
@@ -23,30 +23,28 @@ namespace FilmesApi.Repository
 
         public Filme AdicionarFilme(Filme filme)
         {
-            _context.Filmes.Add(filme);
+            _context.Add(filme);
             _context.SaveChanges();
             return filme;
         }
 
-        public void ApagarFilme(int id)
+        public void ApagarFilme(Filme filme)
         {
-            Filme? filmeEncontrado = _context.Filmes.FirstOrDefault(filmes => filmes.Id == id);
-            //return _context.Filmes.Remove(filmeEncontrado);
+            _context.Filmes.Remove(filme);
+            _context.SaveChanges();
         }
 
         public Filme BuscarFilmePorId(int id)
         {
-            var filme = _context.Filmes.FirstOrDefault(filmes => filmes.Id == id);
+            var filme = _context.Filmes.AsNoTracking().FirstOrDefault(filmes => filmes.Id == id);
             return filme;
         }
 
-        public Filme EditarFilme(int id, UpdateFilmeDto filme)
+        public Filme EditarFilme(Filme filme)
         {
-            Filme? filmeEncontrado = _context.Filmes.FirstOrDefault(filmes => filmes.Id == id);
-            _mapper.Map(filme, filmeEncontrado);
+            _context.Update(filme);
             _context.SaveChanges();
-
-            return filmeEncontrado;
+            return filme;
         }
     }
 }
