@@ -1,19 +1,20 @@
-﻿using FilmesApi.Models;
+﻿using FilmesApi.Data.Dtos;
+using FilmesApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FilmesApi.Service.Interfaces
 {
     public interface IFilmeService
     {
-        public IEnumerable<Filme> ListarTodos(int skip,int take);
+        IEnumerable<Filme> ListarTodos(int skip,int take);
 
-        public Filme AdicionarFilme(Filme filme);
+        Filme AdicionarFilme(Filme filme);
 
-        public Filme EditarFilme(int id, Filme filme);
+        Filme EditarFilme(int id, UpdateFilmeDto filme);
 
-        public IActionResult ApagarFilme(int id);
+        void ApagarFilme(int id);
 
-        public Filme BuscarFilmePorId(int id);
+        Filme BuscarFilmePorId(int id);
 
     }
 }

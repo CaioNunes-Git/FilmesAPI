@@ -7,7 +7,7 @@ using FilmesApi.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FilmesApi.Controllers
-{
+{ 
     [ApiController]
     [Route("[controller]")]
     public class FilmeController : ControllerBase
@@ -36,13 +36,14 @@ namespace FilmesApi.Controllers
             return CreatedAtAction(nameof(BuscarFilmePorId), new { filme.Id }, filmeDto);
         }
 
-        [HttpPut]
-        public void EditarFilme(int id, [FromBody] CreateFilmeDto filmeDto)
+        [HttpPut("{id}")]
+        public IActionResult EditarFilme(int id, [FromBody] UpdateFilmeDto filmeDto)
         {
-            _filmeService.EditarFilme(id,_mapper.Map<Filme>(filmeDto));
+            _filmeService.EditarFilme(id, filmeDto);
+            return NoContent();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public void ApagarFilme(int id)
         {
             _filmeService.ApagarFilme(id);

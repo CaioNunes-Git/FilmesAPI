@@ -1,4 +1,5 @@
-﻿using FilmesApi.Data;
+﻿using AutoMapper;
+using FilmesApi.Data;
 using FilmesApi.Data.Dtos;
 using FilmesApi.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -8,11 +9,12 @@ namespace FilmesApi.Repository
     public class FilmeRepository : IFilmeRepository
     {
         private readonly FilmeContext _context;
+        private IMapper _mapper;
 
-        public FilmeRepository(FilmeContext context)
+        public FilmeRepository(FilmeContext context, IMapper mapper)
         {
             _context = context;
-
+            _mapper = mapper;
         }
         public IEnumerable<Filme> ListarTodos(int skip, int take)
         {
@@ -29,7 +31,7 @@ namespace FilmesApi.Repository
         public void ApagarFilme(int id)
         {
             Filme? filmeEncontrado = _context.Filmes.FirstOrDefault(filmes => filmes.Id == id);
-            return _context.Filmes.Remove(filmeEncontrado);
+            //return _context.Filmes.Remove(filmeEncontrado);
         }
 
         public Filme BuscarFilmePorId(int id)
@@ -38,11 +40,12 @@ namespace FilmesApi.Repository
             return filme;
         }
 
-        public Filme EditarFilme(int id, Filme filme)
+        public Filme EditarFilme(int id, UpdateFilmeDto filme)
         {
             Filme? filmeEncontrado = _context.Filmes.FirstOrDefault(filmes => filmes.Id == id);
-            _context.Filmes.Update(filmeEncontrado);
-            
+            _mapper.Map(filme, filmeEncontrado);
+            _context.SaveChanges();
+
             return filmeEncontrado;
         }
     }

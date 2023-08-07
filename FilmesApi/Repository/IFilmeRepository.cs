@@ -1,4 +1,5 @@
-﻿using FilmesApi.Models;
+﻿using FilmesApi.Data.Dtos;
+using FilmesApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FilmesApi.Repository
@@ -9,7 +10,7 @@ namespace FilmesApi.Repository
 
          Filme AdicionarFilme(Filme filme);
 
-         Filme EditarFilme(int id, Filme filme);
+         Filme EditarFilme(int id, UpdateFilmeDto filme);
 
          void ApagarFilme(int id);
 
