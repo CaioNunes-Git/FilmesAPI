@@ -25,10 +25,6 @@ namespace FilmesApi.Service
 
         public Filme AdicionarFilme(Filme filme)
         {
-            if (filme == null) throw new ArgumentNullException("Teu filme ta nulo meu patrão");
-            if (filme.Titulo == null) throw new ArgumentNullException("Vai Cadastrar filme sem título é corno?");
-            if (filme.Genero == null) throw new ArgumentNullException("Informe um genere");
-            if (filme.Duracao == 0) throw new Exception("Já acabou o filme?");
             return _filmeRepository.AdicionarFilme(filme);
         }
 
@@ -47,11 +43,6 @@ namespace FilmesApi.Service
 
         public Filme EditarFilme(Filme filme)
         {
-            if (filme == null) throw new ArgumentNullException("Teu filme ta nulo meu patrão");
-            if (filme.Titulo == null) throw new ArgumentNullException("Vai Cadastrar filme sem título é corno?");
-            if (filme.Genero == null) throw new ArgumentNullException("Informe um genere");
-            if (filme.Duracao == 0) throw new ArgumentNullException("Já acabou o filme?");
-           
             var filmeV = _filmeRepository.BuscarFilmePorId(filme.Id);
             if (filmeV == null) throw new KeyNotFoundException("F");
 
