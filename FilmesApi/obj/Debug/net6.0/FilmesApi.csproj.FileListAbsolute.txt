@@ -41,3 +41,6 @@ C:\Users\CaioNunes\source\repos\FilmesApi\FilmesApi\bin\Debug\net6.0\MySqlConnec
 C:\Users\CaioNunes\source\repos\FilmesApi\FilmesApi\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\CaioNunes\source\repos\FilmesApi\FilmesApi\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\CaioNunes\source\repos\FilmesApi\FilmesApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\CaioNunes\source\repos\FilmesApi\FilmesApi\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\CaioNunes\source\repos\FilmesApi\FilmesApi\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\CaioNunes\source\repos\FilmesApi\FilmesApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "ZOlPxfyGDbLbx7XFH9eYc2xpiHJnCCw/ywXNSg2QA1Y+kIIV/N6zw9UkFAUTrv2vL+IAo6iHiKVZ7F9N/8qoaA==",
+  "dgSpecHash": "rLmDefHkiRHeCnKxba5DcGgCelook0gAanYMczyw5Kb6srpvx2lD0XWHvEwe1Xr1sMnaGq4msSNwe8a6baEPqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\CaioNunes\\source\\repos\\FilmesApi\\FilmesApi\\FilmesApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CaioNunes\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\CaioNunes\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\CaioNunes\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
+    "C:\\Users\\CaioNunes\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\CaioNunes\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\CaioNunes\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\CaioNunes\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\CaioNunes\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
