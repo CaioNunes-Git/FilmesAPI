@@ -43,9 +43,6 @@ namespace FilmesApi.Service
 
         public Filme EditarFilme(Filme filme)
         {
-            var filmeV = _filmeRepository.BuscarFilmePorId(filme.Id);
-            if (filmeV == null) throw new KeyNotFoundException("F");
-
             return _filmeRepository.EditarFilme(filme);
         }
     }

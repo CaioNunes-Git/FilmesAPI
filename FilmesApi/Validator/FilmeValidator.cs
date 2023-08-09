@@ -18,6 +18,9 @@ namespace FilmesApi.Models.Validator
 
             RuleFor(f=>f.Duracao).Equal(0)
                 .WithMessage("Já acabou o filme?");
+
+            RuleFor(f => f).NotNull()
+                .WithMessage("Tome vergonha e me mande um filme que não seja nulo");
         }
 
     }
