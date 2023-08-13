@@ -1498,19 +1498,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CaioNunes\\.nuget\\packages\\": {}
+    "C:\\Users\\suporte\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CaioNunes\\source\\repos\\FilmesApi\\FilmesApi\\FilmesApi.csproj",
+      "projectUniqueName": "C:\\Users\\suporte\\Source\\Repos\\FilmesAPI\\FilmesApi\\FilmesApi.csproj",
       "projectName": "FilmesApi",
-      "projectPath": "C:\\Users\\CaioNunes\\source\\repos\\FilmesApi\\FilmesApi\\FilmesApi.csproj",
-      "packagesPath": "C:\\Users\\CaioNunes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CaioNunes\\source\\repos\\FilmesApi\\FilmesApi\\obj\\",
+      "projectPath": "C:\\Users\\suporte\\Source\\Repos\\FilmesAPI\\FilmesApi\\FilmesApi.csproj",
+      "packagesPath": "C:\\Users\\suporte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\suporte\\Source\\Repos\\FilmesAPI\\FilmesApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\CaioNunes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\suporte\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1518,6 +1518,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1590,7 +1591,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23330.10\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
